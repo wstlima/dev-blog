@@ -1,0 +1,19 @@
+<% include ./_painel_topo.ejs%>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Nome</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for(var p of tags){%>
+    <tr>
+        <td></td>
+        <td><%= p.nome %></td>
+    </tr>
+    <%}%>
+    </tbody>
+</table>
+
+<% include ./_painel_rodape.ejs%>

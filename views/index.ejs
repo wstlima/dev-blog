@@ -1,0 +1,28 @@
+<% include ./_front_topo.ejs%>
+    <%if(typeof showTitle !== 'undefined' && showTitle){%>
+    <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+            <div class="mdl-card__supporting-text">
+                <h6>Resultados para : <%=word%></h6>
+            </div>
+        
+    </section>
+        
+    <%}%>
+
+
+    <%for(post of posts){%>
+      <section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+        <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color-text--white">
+            <img src="<%= post.ImageURL%>" height="271px" width="215px" alt="<%= post.titulo%>">
+        </header>
+        <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+            <div class="mdl-card__supporting-text">
+                <h4><%= post.titulo %></h4>
+                <%- post.conteudo.substr(0,160) %> ...
+            </div>
+            <div class="mdl-card__actions mdl-card--border"><a href="/posts/<%= post.posturl %>" class="mdl-button">Leia Mais</a></div>
+        </div>
+    </section>
+    <br><br>
+    <%}%>
+<% include ./_front_rodape.ejs%>

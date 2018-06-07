@@ -1,0 +1,28 @@
+<% include ./_painel_topo.ejs%>
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>Nome</th>
+                <th>Usuario</th>
+                <th>Acesso</th>
+                <th>Sobre</th>
+                <th>Postagens</th>
+                <th>Editar</th>
+            </tr>
+            </thead>
+            <tbody>
+                <%for(var u of users){%>
+                <tr>
+                    <td></td>
+                    <td><%= u.nome %></td>
+                    <td><%= u.usuario %></td>
+                    <td><%= u.acesso %></td>
+                    <td><%= u.sobre %></td>
+                    <td><%= 0 %></td>
+                    <td><a class="btn btn-primary" href="./users/edit/<%= u.usuario %>">Editar</a></td>
+                </tr>
+            <%}%>
+            </tbody>
+        </table>
+<% include ./_painel_rodape.ejs%>

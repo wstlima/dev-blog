@@ -1,0 +1,91 @@
+<% include ./_front_topo.ejs%>
+
+<div id ="mycard">
+
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp signupform">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">Cadastre-se:</h2>
+        </div>
+
+        <div class="mdl-card__supporting-text">
+            <div class=" errormessage" id="msgcolor">
+                <div id="message"></div>
+            </div>
+            <form method="post" id="form1">
+                    <div id="usuario">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" required name="nome">
+                            <label class="mdl-textfield__label" for="usuario">Nome:</label>
+                            <span class="mdl-textfield__error">Informe seu nome</span>
+                        </div>
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="text" required name="usuario">
+                            <label class="mdl-textfield__label" for="usuario">Usuário</label>
+                            <span class="mdl-textfield__error">Informe um usuário</span>
+                        </div>
+                    </div>
+                <div id="email">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text" required name="email">
+                        <label class="mdl-textfield__label" for="email">Email</label>
+                        <span class="mdl-textfield__error">Informe um Email</span>
+                    </div>
+                </div>
+
+                    <div id="password">
+                        <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                            <input class="mdl-textfield__input" type="password" required name="password" >
+                            <label class="mdl-textfield__label" for="password">Senha</label>
+                            <span class="mdl-textfield__error">Informe uma senha</span>
+                        </div>
+                    </div>
+
+                <div id="Bio">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <textarea rows="3" class="mdl-textfield__input" type="text" required name="sobre"></textarea>
+                        <label class="mdl-textfield__label" for="sobre">Sobre</label>
+                        <span class="mdl-textfield__error">Informe uma descrição sobre você</span>
+                    </div>
+                </div>
+                <div id="Social">
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text"  name="facebook">
+                        <label class="mdl-textfield__label" for="facebook">Conta do Facebook:</label>
+                        <span class="mdl-textfield__error">Informe sua URL</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text"  name="twitter">
+                        <label class="mdl-textfield__label" for="facebook">Conta do Twitter:</label>
+                        <span class="mdl-textfield__error">Informe sua URL</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text"  name="website">
+                        <label class="mdl-textfield__label" for="facebook">Link do WebSite:</label>
+                        <span class="mdl-textfield__error">Informe sua URL</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text"  name="linkedin">
+                        <label class="mdl-textfield__label" for="facebook">Conta do LinkedIn:</label>
+                        <span class="mdl-textfield__error">Informe sua URL</span>
+                    </div>
+                    <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+                        <input class="mdl-textfield__input" type="text"  name="youtube">
+                        <label class="mdl-textfield__label" for="youtube">Conta do Youtube:</label>
+                        <span class="mdl-textfield__error">Informe sua URL</span>
+                    </div>
+                </div>
+
+                    <div>
+                        <input type="submit" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" value="Cadastrar" >
+                        <a href="/" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--colored">Cancelar</a>
+                    </div>
+            </form>
+        </div>
+
+    </div>
+
+
+</div>
+
+
+<% include ./_front_rodape.ejs%>

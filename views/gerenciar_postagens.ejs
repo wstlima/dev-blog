@@ -1,0 +1,50 @@
+<% include ./_painel_topo.ejs%>
+<table class="table table-striped table-hover table-bordered">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Título</th>
+        <th>Conteúdo</th>
+        <th>Categoria</th>
+        <th>Tags</th>
+        <th>Exibições</th>
+        <th>Autor</th>
+    </tr>
+    </thead>
+    <tbody>
+    <%for(var p of posts){%>
+    <tr>
+        <td></td>
+        <td id="cp"><%= p.titulo %></td>
+        <td><%- p.conteudo.substr(0,160)+ "..." %></td>
+        <td><%= p.categoria %></td>
+        <td><%= p.tags %></td>
+        <td><%= p.exibicao %></td>
+        <td><%= p.Autor %></td>
+        <td><a class="btn btn-primary" href="/controlpanel/posts/edit/<%= p.posturl %>">Editar</a></td>
+        <td><a class="btn btn-primary postdelete" href="/controlpanel/posts/delete/<%= p.posturl %>">Deletar</a></td>
+        <input type="text" hidden id="posturl" value="<%= p.posturl %>">
+    </tr>
+    <%}%>
+    </tbody>
+</table>
+<script   src="/js/jquery-3.0.0.min.js"></script>
+<script>
+$('.postdelete').click(function(event){
+        event.preventDefault();
+        var c = window.confirm('Are You sure');
+        if(c){
+            $.ajax({
+            type:'POST',
+            url:$('.postdelete').attr('href')
+            }).always(function(){
+                window.location.href= '/controlpanel/posts';
+            }).fail(function(err){
+                console.log(err);
+            });
+            
+        }
+    });
+        
+</script>
+<% include ./_painel_rodape.ejs%>
