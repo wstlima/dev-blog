@@ -8,6 +8,9 @@ Recursos:
  - O usuário só pode editar suas postagens e o administrador pode editar todas as postagens.
  - O usuário também pode ver o número de visitantes de suas postagens.
 
+
+Demo: http://boadicabrasil.top:88
+
 Foi utilizado neste desenvolvimento:
 - Express.js 
 - Mongodb 
